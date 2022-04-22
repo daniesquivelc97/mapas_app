@@ -41,7 +41,10 @@ class _AccessButton extends StatelessWidget {
           shape: const StadiumBorder(),
           elevation: 0,
           splashColor: Colors.transparent,
-          onPressed: () {},
+          onPressed: () {
+            final gpsBloc = BlocProvider.of<GpsBloc>(context);
+            gpsBloc.askGpsAccess();
+          },
         )
       ],
     );
